@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Utility Scripts
+download_images.ps1
+push_frontend.ps1
