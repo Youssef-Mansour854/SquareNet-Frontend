@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <!-- Roof -->
+  <path d="M 20 132 L 128 32 L 236 132" fill="none" stroke="#18181b" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Walls -->
+  <path d="M 56 120 L 56 224 L 200 224 L 200 120" fill="none" stroke="#18181b" stroke-width="24" stroke-linejoin="round"/>
+  <!-- Door -->
+  <rect x="104" y="160" width="48" height="64" fill="#18181b" rx="6"/>
+</svg>
