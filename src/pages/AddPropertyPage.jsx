@@ -158,6 +158,7 @@ const AddPropertyPage = () => {
     setIsSubmitting(false);
 
     if (!result.ok) {
+      console.error('Property addition failed:', result.message);
       setErrorMsg(result.message);
       return;
     }
