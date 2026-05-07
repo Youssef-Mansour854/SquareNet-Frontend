@@ -27,6 +27,7 @@ const RegisterPage = () => {
   };
 
   const handleSubmit = async (event) => {
+    event.preventDefault();
     // Frontend Validations
     if (formData.password.length < 6) {
       setErrorMessage('كلمة المرور يجب أن لا تقل عن 6 أحرف.');
