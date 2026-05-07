@@ -59,7 +59,10 @@ const RegisterPage = () => {
       return;
     }
 
-    navigate('/login', { replace: true });
+    navigate('/login', { 
+      replace: true, 
+      state: { successMessage: 'تم إنشاء الحساب بنجاح! يمكنك الآن تسجيل الدخول.' } 
+    });
   };
 
   return (

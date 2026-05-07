@@ -50,6 +50,12 @@ const LoginPage = () => {
           </div>
         ) : null}
 
+        {location.state?.successMessage && !errorMessage ? (
+          <div className="rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm font-medium text-emerald-700">
+            {location.state.successMessage}
+          </div>
+        ) : null}
+
         <div>
           <label htmlFor="email" className="mb-2 block text-sm font-bold text-muted-foreground">
             البريد الإلكتروني
