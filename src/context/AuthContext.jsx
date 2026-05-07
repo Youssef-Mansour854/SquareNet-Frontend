@@ -96,7 +96,7 @@ export const AuthProvider = ({ children }) => {
       const resData = await parseResponseBody(res);
 
       if (res.ok) {
-        return { ok: true, user: resData.data };
+        return { ok: true, user: persistAuthState(resData) };
       }
 
       return {
