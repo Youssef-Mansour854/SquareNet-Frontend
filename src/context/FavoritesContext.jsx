@@ -2,6 +2,8 @@ import React, { createContext, useContext, useEffect, useState } from 'react';
 import { useAuth } from './AuthContext';
 import { useProperties } from './PropertiesContext';
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://squarenet-backend-production.up.railway.app';
+
 const FavoritesContext = createContext();
 
 export const FavoritesProvider = ({ children }) => {
@@ -15,7 +17,7 @@ export const FavoritesProvider = ({ children }) => {
         return;
     }
     try {
-      const res = await fetch('http://localhost:3000/api/v1/wishlist', {
+      const res = await fetch(`${API_BASE_URL}/api/v1/wishlist`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await res.json();
@@ -41,7 +43,7 @@ export const FavoritesProvider = ({ children }) => {
     setFavorites((prevFavorites) => [...prevFavorites, property]);
 
     try {
-      await fetch('http://localhost:3000/api/v1/wishlist', {
+      await fetch(`${API_BASE_URL}/api/v1/wishlist`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -67,7 +69,7 @@ export const FavoritesProvider = ({ children }) => {
     );
 
     try {
-      await fetch(`http://localhost:3000/api/v1/wishlist/${propertyId}`, {
+      await fetch(`${API_BASE_URL}/api/v1/wishlist/${propertyId}`, {
         method: 'DELETE',
         headers: {
           Authorization: `Bearer ${token}`

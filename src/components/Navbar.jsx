@@ -22,9 +22,9 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
   const getProfileImgUrl = (path) => {
     if (!path) return '';
     if (path.startsWith('http')) return path;
-    if (path.startsWith('/uploads/')) return `${import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000'}${path.replace('/uploads/', '/')}`;
-    if (path.startsWith('/')) return `${import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000'}${path}`;
-    return `${import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000'}/${path}`;
+    if (path.startsWith('/uploads/')) return `${import.meta.env.VITE_API_BASE_URL || 'https://squarenet-backend-production.up.railway.app'}${path.replace('/uploads/', '/')}`;
+    if (path.startsWith('/')) return `${import.meta.env.VITE_API_BASE_URL || 'https://squarenet-backend-production.up.railway.app'}${path}`;
+    return `${import.meta.env.VITE_API_BASE_URL || 'https://squarenet-backend-production.up.railway.app'}/${path}`;
   };
 
   // Count unread message notifications

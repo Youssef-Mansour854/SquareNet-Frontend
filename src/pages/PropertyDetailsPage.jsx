@@ -6,6 +6,8 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { MapPin, Bed, Bath, Square, ArrowRight, Heart, Share2, Phone, Mail, Star, MessageSquare, X, ChevronRight, ChevronLeft } from 'lucide-react';
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://squarenet-backend-production.up.railway.app';
+
 const PropertyDetailsPage = () => {
   const { id } = useParams();
   const { properties: propertiesData, incrementPropertyView, propertyViews } = useProperties();
@@ -51,7 +53,7 @@ const PropertyDetailsPage = () => {
   // Fetch reviews for current property
   const fetchReviews = async (propId) => {
     try {
-      const res = await fetch(`http://localhost:3000/api/v1/reviews?propertyId=${propId}`);
+      const res = await fetch(`${API_BASE_URL}/api/v1/reviews?propertyId=${propId}`);
       const data = await res.json();
       if (res.ok) {
         setReviews(data.data || []);
@@ -66,7 +68,7 @@ const PropertyDetailsPage = () => {
     setReviewError('');
     setReviewLoading(true);
     try {
-      const res = await fetch('http://localhost:3000/api/v1/reviews', {
+      const res = await fetch(`${API_BASE_URL}/api/v1/reviews`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -94,7 +96,7 @@ const PropertyDetailsPage = () => {
 
   const handleDeleteReview = async (reviewId) => {
     try {
-      await fetch(`http://localhost:3000/api/v1/reviews/${reviewId}`, {
+      await fetch(`${API_BASE_URL}/api/v1/reviews/${reviewId}`, {
         method: 'DELETE',
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -154,7 +156,6 @@ const PropertyDetailsPage = () => {
       // Property not found in context, try API directly
       const fetchSingleProperty = async () => {
         try {
-          const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000';
           const res = await fetch(`${API_BASE_URL}/api/v1/properties/${id}`);
           const data = await res.json();
           if (res.ok && data.data) {

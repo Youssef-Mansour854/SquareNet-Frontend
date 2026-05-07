@@ -3,6 +3,8 @@ import AuthLayout from '../layouts/AuthLayout';
 import { Lock } from 'lucide-react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://squarenet-backend-production.up.railway.app';
+
 const ResetPasswordPage = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -37,7 +39,7 @@ const ResetPasswordPage = () => {
     setLoading(true);
 
     try {
-      const res = await fetch('http://localhost:3000/api/v1/auth/resetPassword', {
+      const res = await fetch(`${API_BASE_URL}/api/v1/auth/resetPassword`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, newPassword: formData.newPassword }),
