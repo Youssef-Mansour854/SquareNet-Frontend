@@ -49,12 +49,8 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
   return (
     <nav className="bg-background/95 border-b border-border backdrop-blur-md transition-colors duration-300 sticky top-0 z-50">
       <div className="flex items-center justify-between px-3 sm:px-6 py-3 sm:py-4">
-      <Link to="/" className="cursor-pointer flex items-center">
-        <img 
-          src={isDarkMode ? "/logo/IMG-20260511-WA0083.jpg" : "/logo/IMG-20260511-WA0082.jpg"} 
-          alt="Square Net" 
-          className="h-10 sm:h-12 w-auto object-contain transition-all duration-300"
-        />
+      <Link to="/" className="text-2xl font-black tracking-tight text-foreground cursor-pointer">
+        Square <span className="text-primary">Net</span>
       </Link>
 
       <div className="hidden md:flex gap-6 text-sm font-semibold items-center">
