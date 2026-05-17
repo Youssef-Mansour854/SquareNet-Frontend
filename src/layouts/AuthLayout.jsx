@@ -21,8 +21,17 @@ const AuthLayout = ({ children, title, subtitle }) => {
         <div className="mx-auto w-full max-w-sm lg:w-96">
           
           {/* اللوجو للموبايل (يظهر فقط في الشاشات الصغيرة) */}
-          <div className="lg:hidden text-3xl font-black tracking-tight text-center mb-8">
-            Square <span className="text-primary">Net</span>
+          <div className="lg:hidden flex justify-center mb-8">
+            <img 
+              src="/logo/IMG-20260511-WA0082.jpg" 
+              alt="Square Net" 
+              className="h-12 w-auto object-contain dark:hidden"
+            />
+            <img 
+              src="/logo/IMG-20260511-WA0083.jpg" 
+              alt="Square Net" 
+              className="h-12 w-auto object-contain hidden dark:block"
+            />
           </div>
 
           <div>
@@ -54,8 +63,12 @@ const AuthLayout = ({ children, title, subtitle }) => {
         
         {/* المحتوى فوق الصورة */}
         <div className="absolute inset-0 flex flex-col items-center justify-center p-12 text-center">
-          <div className="text-5xl font-black tracking-tight text-white mb-6 drop-shadow-lg">
-            Square <span className="text-primary">Net</span>
+          <div className="flex justify-center mb-6">
+            <img 
+              src="/logo/IMG-20260511-WA0083.jpg" 
+              alt="Square Net" 
+              className="h-20 w-auto object-contain drop-shadow-lg"
+            />
           </div>
           <p className="text-xl text-zinc-200 font-medium max-w-md drop-shadow-md">
             بوابتك الأولى لاكتشاف أرقى العقارات بكل سهولة وأمان.

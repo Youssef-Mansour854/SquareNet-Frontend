@@ -38,7 +38,7 @@ const AuthPromptModal = ({ isOpen, onClose, redirectTo = '/favorites' }) => {
           <Link
             to="/login"
             state={{ from: redirectTo }}
-            className="flex items-center justify-center gap-2 rounded-2xl bg-zinc-900 px-5 py-3 font-bold text-white transition-colors hover:bg-primary text-primary-foreground dark:text-zinc-900 dark:hover:bg-white"
+            className="flex items-center justify-center gap-2 rounded-2xl bg-zinc-900 px-5 py-3 font-bold text-white transition-colors hover:bg-primary text-primary-foreground dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-white"
           >
             <LogIn size={18} />
             تسجيل دخول
