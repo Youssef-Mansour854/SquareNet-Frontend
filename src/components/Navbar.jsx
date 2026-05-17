@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Sun, Moon, Heart, MessageCircle, Menu, X } from 'lucide-react';
+import { Sun, Moon, Heart, MessageCircle, Menu, X, LayoutDashboard } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useFavorites } from '../context/FavoritesContext';
 import { useAuth } from '../context/AuthContext';
@@ -69,6 +69,32 @@ const Navbar = ({ isDarkMode, toggleTheme }) => {
         >
           {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
+
+        {/* Dashboard Icon in Mobile Mode for Owner / Admin */}
+        {isAuthenticated && (
+          <>
+            {currentUser?.accountType === 'owner' && currentUser?.role === 'user' && (
+              <Link
+                to="/dashboard"
+                className="md:hidden p-2 rounded-full bg-muted text-muted-foreground hover:bg-accent hover:text-accent-foreground transition-colors border border-border flex items-center justify-center outline-none"
+                aria-label="لوحة التحكم"
+                title="لوحة التحكم"
+              >
+                <LayoutDashboard size={20} />
+              </Link>
+            )}
+            {(currentUser?.role === 'admin' || currentUser?.role === 'superadmin') && (
+              <Link
+                to="/admin"
+                className="md:hidden p-2 rounded-full bg-muted text-muted-foreground hover:bg-accent hover:text-accent-foreground transition-colors border border-border flex items-center justify-center outline-none"
+                aria-label="لوحة المدير"
+                title="لوحة المدير"
+              >
+                <LayoutDashboard size={20} />
+              </Link>
+            )}
+          </>
+        )}
 
         <div className="hidden sm:flex items-center gap-4">
           {isAuthenticated ? (

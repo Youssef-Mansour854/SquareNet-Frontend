@@ -79,7 +79,7 @@ const RegisterPage = () => {
           <label className="mb-3 block text-sm font-bold text-muted-foreground">
             نوع الحساب
           </label>
-          <div className="grid grid-cols-3 gap-3">
+          <div className="grid grid-cols-2 gap-3">
             <label className="cursor-pointer">
               <input type="radio" name="accountType" value="buyer" className="peer sr-only" checked={formData.accountType === 'buyer'} onChange={handleChange} />
               <div className="flex flex-col items-center gap-2 rounded-xl border-2 border-transparent bg-zinc-50 p-3 text-center text-sm font-bold text-zinc-500 transition-all hover:bg-zinc-100 peer-checked:border-zinc-900 peer-checked:bg-white peer-checked:text-zinc-900 peer-checked:shadow-sm dark:bg-zinc-950/50 dark:text-zinc-500 dark:hover:bg-zinc-900/50 dark:peer-checked:border-zinc-500 dark:peer-checked:bg-zinc-800 dark:peer-checked:text-white">
@@ -93,14 +93,6 @@ const RegisterPage = () => {
               <div className="flex flex-col items-center gap-2 rounded-xl border-2 border-transparent bg-zinc-50 p-3 text-center text-sm font-bold text-zinc-500 transition-all hover:bg-zinc-100 peer-checked:border-zinc-900 peer-checked:bg-white peer-checked:text-zinc-900 peer-checked:shadow-sm dark:bg-zinc-950/50 dark:text-zinc-500 dark:hover:bg-zinc-900/50 dark:peer-checked:border-zinc-500 dark:peer-checked:bg-zinc-800 dark:peer-checked:text-white">
                 <Home size={20} />
                 <span>مالك</span>
-              </div>
-            </label>
-
-            <label className="cursor-pointer">
-              <input type="radio" name="accountType" value="agent" className="peer sr-only" checked={formData.accountType === 'agent'} onChange={handleChange} />
-              <div className="flex flex-col items-center gap-2 rounded-xl border-2 border-transparent bg-zinc-50 p-3 text-center text-sm font-bold text-zinc-500 transition-all hover:bg-zinc-100 peer-checked:border-zinc-900 peer-checked:bg-white peer-checked:text-zinc-900 peer-checked:shadow-sm dark:bg-zinc-950/50 dark:text-zinc-500 dark:hover:bg-zinc-900/50 dark:peer-checked:border-zinc-500 dark:peer-checked:bg-zinc-800 dark:peer-checked:text-white">
-                <Briefcase size={20} />
-                <span>وسيط</span>
               </div>
             </label>
           </div>
