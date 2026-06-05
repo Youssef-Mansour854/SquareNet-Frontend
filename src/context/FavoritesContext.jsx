@@ -2,7 +2,7 @@ import React, { createContext, useContext, useEffect, useState } from 'react';
 import { useAuth } from './AuthContext';
 import { useProperties } from './PropertiesContext';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://squarenet-backend-production.up.railway.app';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://square-net-backend-production.up.railway.app';
 
 const FavoritesContext = createContext();
 
@@ -109,3 +109,4 @@ export const useFavorites = () => {
 
   return context;
 };
+

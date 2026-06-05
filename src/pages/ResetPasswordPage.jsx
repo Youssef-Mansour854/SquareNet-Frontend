@@ -3,7 +3,7 @@ import AuthLayout from '../layouts/AuthLayout';
 import { Lock } from 'lucide-react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://squarenet-backend-production.up.railway.app';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://square-net-backend-production.up.railway.app';
 
 const ResetPasswordPage = () => {
   const navigate = useNavigate();
@@ -128,3 +128,4 @@ const ResetPasswordPage = () => {
 };
 
 export default ResetPasswordPage;
+

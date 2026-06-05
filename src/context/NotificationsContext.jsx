@@ -3,7 +3,7 @@ import { useAuth } from './AuthContext';
 
 const NotificationsContext = createContext();
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://squarenet-backend-production.up.railway.app';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://square-net-backend-production.up.railway.app';
 
 export const NotificationsProvider = ({ children }) => {
   const { token, isAuthenticated } = useAuth();
@@ -152,3 +152,4 @@ export const useNotifications = () => {
   }
   return context;
 };
+

@@ -9,7 +9,7 @@ import {
   MoreVertical, Shield, User as UserIcon, Flag, Plus, UserPlus, AlertCircle
 } from 'lucide-react';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://squarenet-backend-production.up.railway.app';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://square-net-backend-production.up.railway.app';
 
 const AdminDashboard = () => {
   const navigate = useNavigate();
@@ -689,3 +689,4 @@ const AdminDashboard = () => {
 };
 
 export default AdminDashboard;
+

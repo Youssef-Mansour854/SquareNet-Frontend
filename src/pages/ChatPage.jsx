@@ -5,7 +5,7 @@ import { io } from 'socket.io-client';
 import { Send, User as UserIcon, Loader2, ArrowRight, Pencil, Trash2, Check, CheckCheck, X, Circle } from 'lucide-react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://squarenet-backend-production.up.railway.app';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://square-net-backend-production.up.railway.app';
 
 /** unreadCount من الـ API يكون غالباً كائن JSON وليس Map — استدعاء .get() يسبب crash */
 function unreadCountForUser(unreadCount, userId) {
@@ -646,3 +646,4 @@ const ChatPage = () => {
 };
 
 export default ChatPage;
+

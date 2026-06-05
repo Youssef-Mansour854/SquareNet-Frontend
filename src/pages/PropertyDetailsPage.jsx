@@ -6,7 +6,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { MapPin, Bed, Bath, Square, ArrowRight, Heart, Share2, Phone, Mail, Star, MessageSquare, X, ChevronRight, ChevronLeft } from 'lucide-react';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://squarenet-backend-production.up.railway.app';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://square-net-backend-production.up.railway.app';
 
 const PropertyDetailsPage = () => {
   const { id } = useParams();
@@ -601,3 +601,4 @@ const PropertyDetailsPage = () => {
 };
 
 export default PropertyDetailsPage;
+

@@ -3,7 +3,7 @@ import AuthLayout from '../layouts/AuthLayout';
 import { Mail } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://squarenet-backend-production.up.railway.app';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://square-net-backend-production.up.railway.app';
 
 const ForgotPasswordPage = () => {
   const navigate = useNavigate();
@@ -95,3 +95,4 @@ const ForgotPasswordPage = () => {
 };
 
 export default ForgotPasswordPage;
+

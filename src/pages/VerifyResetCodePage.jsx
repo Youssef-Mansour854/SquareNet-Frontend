@@ -3,7 +3,7 @@ import AuthLayout from '../layouts/AuthLayout';
 import { ShieldCheck } from 'lucide-react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://squarenet-backend-production.up.railway.app';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://square-net-backend-production.up.railway.app';
 
 const VerifyResetCodePage = () => {
   const navigate = useNavigate();
@@ -96,3 +96,4 @@ const VerifyResetCodePage = () => {
 };
 
 export default VerifyResetCodePage;
+
